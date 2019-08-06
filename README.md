@@ -36,3 +36,6 @@ In package.json, set up scripts to build, run, and run those two command simulta
   "start": "concurrently npm:start:*"   /* npm: is telling concurrently to look at package.json file and find scripts section, and then run anything with pattern start:*  */
 }
 
+install type definition file to use file system (fs) Node. Node type definition file is not already included.   
+
+  npm install @types/node

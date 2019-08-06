@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KrisKam/footballStats#readme",
   "dependencies": {
+    "@types/node": "^12.6.9",
     "concurrently": "^4.1.1",
     "nodemon": "^1.19.1"
   }
