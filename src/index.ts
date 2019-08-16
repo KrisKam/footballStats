@@ -8,14 +8,11 @@ const matches = fs.readFileSync("football.csv", {
     return row.split(",");
   });
 
-// const homeWin = "H";
-// const awayWin = "A";
-// const draw = "D";
-
-const MatchResult = {
-  HomeWin: "H",
-  AwayWin: "A",
-  Draw: "D"
+//enum is an object that stores closely related values
+enum MatchResult {
+  HomeWin = "H",
+  AwayWin = "A",
+  Draw = "D"
 }
 
 let manUnitedWins = 0;
