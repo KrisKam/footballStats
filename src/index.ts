@@ -3,6 +3,8 @@ import { CsvFileReader } from "./CsvFileReader";
 const reader = new CsvFileReader("football.csv");
 reader.read();
 
+console.log(reader.data);
+
 //enum is like an object that stores closely related values
 enum MatchResult {
   HomeWin = "H",
