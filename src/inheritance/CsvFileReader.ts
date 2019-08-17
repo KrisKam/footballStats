@@ -1,9 +1,15 @@
 import fs from "fs";
 
-export class CsvFileReader {
-  data: string[][] = [];
+
+
+//refer to generic type with T by convention
+export abstract class CsvFileReader<T> {
+  data: T[] = [];
   
   constructor(public filename: string) {}
+
+  //get rid of curly braces for abstract method to be used by child class
+  abstract mapRow(row: string[]): T
 
   read(): void {
     this.data = fs.readFileSync(this.filename, {
@@ -13,5 +19,6 @@ export class CsvFileReader {
       .map((row: string): string[] => {
         return row.split(",");
       })
+      .map(this.mapRow);
   }
 }
