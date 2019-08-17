@@ -1,9 +1,8 @@
 import fs from "fs";
-import { MatchResult } from "./MatchResult";
 
-//define a tuple
-type MatchData = [ Date, string, string, number, number, MatchResult, string ]; 
 
+
+//refer to generic type with T by convention
 export abstract class CsvFileReader<T> {
   data: T[] = [];
   
